@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/chirps', function () {
-        return 'Welcome to our chirps page';
+        return view('chirps.index');
     })->name('chirps.index');
 });
 
